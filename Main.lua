@@ -154,15 +154,15 @@ local Settings = Window:Tab({
 Scripts.ESPbrainrot()
 Scripts.ESPplayer()
 Scripts.FPSd()
-Scripts.ZHBooster()
-Scripts.ZHal()
-Scripts.ZHautograb()
+-- Scripts.ZHBooster()
+-- Scripts.ZHal()
+-- Scripts.ZHautograb()
 Scripts.ZHautokick()
-Scripts.ZHclone()
-Scripts.ZHupfloorsteal()
+-- Scripts.ZHclone()
+-- Scripts.ZHupfloorsteal()
 Scripts.ZHxray() ]]
 
-local Booster = Features:Toggle({
+local booster = Features:Toggle({
     Title = "Booster",
     Desc = "Toggle Booster",
     Icon = "chevrons-up",
@@ -195,14 +195,24 @@ local Autokick = Features:Toggle({
     end
 })
 
-local Autokick = Features:Toggle({
-    Title = "Auto kick",
-    Desc = "Toggle Auto kick",
+local autoclone = Features:Toggle({
+    Title = "Auto clone",
+    Desc = "Toggle Auto clone",
     Icon = "hand-grab",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        Scripts.ZHautokick()
+        Scripts.ZHclone()
     end
 })
 
+local xray = Features:Toggle({
+    Title = "xray",
+    Desc = "Toggle xray",
+    Icon = "hand-grab",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        _G.XRM = state
+    end
+})
