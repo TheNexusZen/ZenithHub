@@ -79,7 +79,7 @@ local Booster = Features:Toggle({
     Desc = "Toggle Booster",
     Icon = "chevrons-up",
     Type = "Checkbox",
-    Value = false,
+    Value = true,
     Callback = function(state) 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
     end
