@@ -81,7 +81,7 @@ local Booster = Features:Toggle({
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua?token=GHSAT0AAAAAADXGAWS5LXZSWADUJF7AFEYW2NMNGTQ"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
     end
 })
 
