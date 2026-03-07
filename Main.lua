@@ -29,7 +29,7 @@ local Window = WindUI:CreateWindow({
     BackgroundImageTransparency = 0.42,
     HideSearchBar = false,
     ScrollBarEnabled = false,
-    WindUI:SetParent(game:Getservice("Coregui"))
+    WindUI:SetParent(Coregui)
     User = {
     Enabled = true,
     Anonymous = true,
