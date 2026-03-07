@@ -56,3 +56,34 @@ Window:EditOpenButton({
 
 local get = gethui()
 windui:setparent(get)
+
+local Features = Window:Tab({
+    Title = "Features",
+    Icon = "blocks", -- optional
+    Locked = false,
+})
+
+local ESP = Window:Tab({
+    Title = "ESP",
+    Icon = "eye", -- optional
+    Locked = false,
+})
+
+local Settings = Window:Tab({
+    Title = "Settings",
+    Icon = "cog", -- optional
+    Locked = false,
+})
+
+-- Features Tab
+
+local Toggle = Tab:Toggle({
+    Title = "Toggle",
+    Desc = "Toggle Description",
+    Icon = "bird",
+    Type = "Checkbox",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
