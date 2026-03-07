@@ -55,7 +55,7 @@ Window:EditOpenButton({
 })
 
 local get = gethui()
-windui:setparent(get)
+WindUI:setparent(get)
 
 local Features = Window:Tab({
     Title = "Features",
