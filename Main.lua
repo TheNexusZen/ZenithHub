@@ -54,9 +54,6 @@ Window:EditOpenButton({
     Draggable = false,
 })
 
-local get = gethui()
-WindUI:setparent(get)
-
 local Features = Window:Tab({
     Title = "Features",
     Icon = "blocks", -- optional
