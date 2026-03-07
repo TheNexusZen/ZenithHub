@@ -17,9 +17,18 @@ if game.PlaceId ~= REQUIRED_ID and not isAllowed() then
 end
 
 
--- loadstrings --
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
+-- SCRIPT LOADSTRINGS
+local ESPbrainrot = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPbrainrot.lua"))()
+local ESPplayer = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPplayer.lua"))()
+local FPSd = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/FPSd.lua"))()
+local ZHBooster = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
+local ZHal = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHal.lua"))()
+local ZHautograb = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
+local ZHautokick = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautokick.lua"))()
+local ZHclone = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHclone.lua"))()
+local ZHupfloorsteal = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHupfloorsteal.lua"))()
+local ZHxray = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHxray.lua"))()
+
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
@@ -133,17 +142,28 @@ local Booster = Features:Toggle({
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
+        ZHBooster
     end
 })
 
-local Booster = Features:Toggle({
-    Title = "Autograb",
-    Desc = "Toggle Autograb",
+local autograb = Features:Toggle({
+    Title = "Auto grab",
+    Desc = "Toggle Auto grab",
     Icon = "hand-grab",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
+        ZHautograb
+    end
+})
+
+local Autokick = Features:Toggle({
+    Title = "Auto kick",
+    Desc = "Toggle Auto kick",
+    Icon = "hand-grab",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        ZHautokick
     end
 })
