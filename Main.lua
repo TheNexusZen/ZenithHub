@@ -93,7 +93,7 @@ local Booster = Features:Toggle({
     Title = "Autograb",
     Desc = "Toggle Autograb",
     Icon = "hand-grab",
-    Type = "Switch",
+    Type = "Checkbox",
     Value = false,
     Callback = function(state) 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
