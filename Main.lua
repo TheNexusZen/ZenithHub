@@ -29,26 +29,27 @@ local Window = WindUI:CreateWindow({
     BackgroundImageTransparency = 0.42,
     HideSearchBar = false,
     ScrollBarEnabled = false,
+    WindUI:SetParent(game:Getservice("Coregui"))
     User = {
     Enabled = true,
     Anonymous = true,
-    Callback = function()
-        -- 1. Toggle the internal state
-        User.Anonymous = not User.Anonymous
-        
-        -- 2. Update the UI icon to match
-        Window.Icon:SetAnonymous(User.Anonymous)
-        
-        -- 3. Trigger the notification
-        local state = User.Anonymous and "Enabled" or "Disabled"
-        WindUI:Notify({
-            Title = "Anonymous Mode",
-            Content = "Anonymous mode is now " .. state,
-            Duration = 3,
-            Icon = "bird",
-        })
-    end,
-}
+    Callback =
+            print("hello")
+},
 
 
+})
+
+Window:EditOpenButton({
+    Title = "Open Zenith Hub",
+    Icon = "monitor",
+    CornerRadius = UDim.new(0,16),
+    StrokeThickness = 2,
+    Color = ColorSequence.new( -- gradient
+        Color3.fromHex("00C8FF"), 
+        Color3.fromHex("FFFFFF")
+    ),
+    OnlyMobile = false,
+    Enabled = true,
+    Draggable = false,
 })
