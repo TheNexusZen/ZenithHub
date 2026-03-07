@@ -82,7 +82,7 @@ local Booster = Features:Toggle({
     Title = "Booster",
     Desc = "Toggle Booster",
     Icon = "chevrons-up",
-    Type = "Circle",
+    Type = "Checkbox",
     Value = false,
     Callback = function(state) 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
@@ -93,7 +93,7 @@ local Booster = Features:Toggle({
     Title = "Autograb",
     Desc = "Toggle Autograb",
     Icon = "hand-grab",
-    Type = "Circle",
+    Type = "Switch",
     Value = false,
     Callback = function(state) 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
