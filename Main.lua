@@ -77,13 +77,14 @@ local Settings = Window:Tab({
 
 -- Features Tab
 
-local Toggle = Tab:Toggle({
-    Title = "Toggle",
-    Desc = "Toggle Description",
-    Icon = "bird",
+local Booster = Features:Toggle({
+    Title = "Booster",
+    Desc = "Toggle Booster",
+    Icon = "chevrons-up",
     Type = "Checkbox",
-    Value = false, -- default value
+    Value = false,
     Callback = function(state) 
-        print("Toggle Activated" .. tostring(state))
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua?token=GHSAT0AAAAAADXGAWS5LXZSWADUJF7AFEYW2NMNGTQ"))()
     end
 })
+
