@@ -18,7 +18,6 @@ end
 
 
 -- SCRIPT LOADSTRINGS
--- Initialize the global script manager
 getgenv().Scripts = {
     ESPbrainrot = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPbrainrot.lua"))() end,
     ESPplayer = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPplayer.lua"))() end,
@@ -32,8 +31,18 @@ getgenv().Scripts = {
     ZHxray = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHxray.lua"))() end
 }
 
--- You can now run any script by calling it like this anywhere:
--- Scripts.ZHBooster() 
+-- EXECUTION LIST
+Scripts.ESPbrainrot()
+Scripts.ESPplayer()
+Scripts.FPSd()
+Scripts.ZHBooster()
+Scripts.ZHal()
+Scripts.ZHautograb()
+Scripts.ZHautokick()
+Scripts.ZHclone()
+Scripts.ZHupfloorsteal()
+Scripts.ZHxray()
+ 
 
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
@@ -141,6 +150,18 @@ local Settings = Window:Tab({
 
 -- Features Tab
 
+--[[ EXECUTION LIST
+Scripts.ESPbrainrot()
+Scripts.ESPplayer()
+Scripts.FPSd()
+Scripts.ZHBooster()
+Scripts.ZHal()
+Scripts.ZHautograb()
+Scripts.ZHautokick()
+Scripts.ZHclone()
+Scripts.ZHupfloorsteal()
+Scripts.ZHxray() ]]
+
 local Booster = Features:Toggle({
     Title = "Booster",
     Desc = "Toggle Booster",
@@ -173,3 +194,15 @@ local Autokick = Features:Toggle({
         Scripts.ZHautokick()
     end
 })
+
+local Autokick = Features:Toggle({
+    Title = "Auto kick",
+    Desc = "Toggle Auto kick",
+    Icon = "hand-grab",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        Scripts.ZHautokick()
+    end
+})
+
