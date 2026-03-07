@@ -1,3 +1,7 @@
+-- loadstrings --
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
+
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 WindUI:AddTheme({
@@ -79,9 +83,19 @@ local Booster = Features:Toggle({
     Desc = "Toggle Booster",
     Icon = "chevrons-up",
     Type = "Circle",
-    Value = true,
+    Value = false,
     Callback = function(state) 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
     end
 })
 
+local Booster = Features:Toggle({
+    Title = "Autograb",
+    Desc = "Toggle Autograb",
+    Icon = "hand-grab",
+    Type = "Circle",
+    Value = false,
+    Callback = function(state) 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
+    end
+})
