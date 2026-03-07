@@ -33,7 +33,7 @@ local Window = WindUI:CreateWindow({
     Enabled = true,
     Anonymous = true,
     Callback = function()
-        User.Anonymous = not User.Anonymous
+        Window.Icon:SetAnonymous(Not User.Anonymous)
         local state = User.Anonymous and "Enabled" or "Disabled"
         WindUI:Notify({
             Title = "Anonymous Mode",
