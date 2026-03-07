@@ -44,6 +44,6 @@ local Window = WindUI:CreateWindow({
         
         print("Clicked! Anonymous is now: " .. tostring(User.Anonymous))
     end,
-}
+},
 
 })
