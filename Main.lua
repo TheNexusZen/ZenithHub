@@ -29,7 +29,6 @@ local Window = WindUI:CreateWindow({
     BackgroundImageTransparency = 0.42,
     HideSearchBar = false,
     ScrollBarEnabled = false,
-    WindUI:SetParent("Coregui")
     User = {
     Enabled = true,
     Anonymous = true,
@@ -53,3 +52,6 @@ Window:EditOpenButton({
     Enabled = true,
     Draggable = false,
 })
+
+local get = gethui()
+windui:setparent(get)
