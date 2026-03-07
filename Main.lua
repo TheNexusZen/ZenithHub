@@ -33,17 +33,22 @@ local Window = WindUI:CreateWindow({
     Enabled = true,
     Anonymous = true,
     Callback = function()
-        Window.Icon:SetAnonymous(Not User.Anonymous)
+        -- 1. Toggle the internal state
+        User.Anonymous = not User.Anonymous
+        
+        -- 2. Update the UI icon to match
+        Window.Icon:SetAnonymous(User.Anonymous)
+        
+        -- 3. Trigger the notification
         local state = User.Anonymous and "Enabled" or "Disabled"
         WindUI:Notify({
             Title = "Anonymous Mode",
             Content = "Anonymous mode is now " .. state,
             Duration = 3,
-            Icon = "user-round-cog",
+            Icon = "bird",
         })
-        
-        print("Clicked! Anonymous is now: " .. tostring(User.Anonymous))
     end,
-},
+}
+
 
 })
