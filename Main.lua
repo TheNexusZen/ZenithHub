@@ -30,10 +30,20 @@ local Window = WindUI:CreateWindow({
     HideSearchBar = false,
     ScrollBarEnabled = false,
     User = {
-        Enabled = true,
-        Anonymous = true,
-        Callback = function()
-            Anonymous = not Anonymous
-        end,
-    },
+    Enabled = true,
+    Anonymous = true,
+    Callback = function()
+        User.Anonymous = not User.Anonymous
+        local state = User.Anonymous and "Enabled" or "Disabled"
+        WindUI:Notify({
+            Title = "Anonymous Mode",
+            Content = "Anonymous mode is now " .. state,
+            Duration = 3,
+            Icon = "user-round-cog",
+        })
+        
+        print("Clicked! Anonymous is now: " .. tostring(User.Anonymous))
+    end,
+}
+
 })
