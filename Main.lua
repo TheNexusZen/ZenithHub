@@ -1,12 +1,20 @@
+local ALLOWED_USERS = {"nexushubtesting", "SAB88191", "seventeelovesyouw"}
 local REQUIRED_ID = 109983668079237
 local Player = game:GetService("Players").LocalPlayer
 
-if game.PlaceId ~= REQUIRED_ID then
-    Player:Kick("Unauthorized Game")
-    return
+local function isAllowed()
+    for _, name in ipairs(ALLOWED_USERS) do
+        if Player.Name == name then
+            return true
+        end
+    end
+    return false
 end
 
-print("Access Granted")
+if game.PlaceId ~= REQUIRED_ID and not isAllowed() then
+    Player:Kick("Unauthorized")
+    return
+end
 
 
 -- loadstrings --
@@ -53,6 +61,35 @@ local Window = WindUI:CreateWindow({
 },
 
 
+})
+
+local developers = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
+
+local Player = game:GetService("Players").LocalPlayer
+
+local function tableHas(tbl, name)
+    for _, v in ipairs(tbl) do
+        if v == name then return true end
+    end
+    return false
+end
+
+local isDev = tableHas(developers, Player.Name)
+
+if isDev then
+    Window:Tag({
+        Title = "Developer",
+        Icon = "shield-check",
+        Color = Color3.fromHex("#ff3030"),
+        Radius = 5,
+    })
+end
+
+Window:Tag({
+    Title = "v1.0.0",
+    Icon = "check",
+    Color = Color3.fromHex("#30ff6a"),
+    Radius = 3,
 })
 
 Window:EditOpenButton({
