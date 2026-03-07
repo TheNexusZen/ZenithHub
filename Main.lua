@@ -1,3 +1,14 @@
+local REQUIRED_ID = 109983668079237
+local Player = game:GetService("Players").LocalPlayer
+
+if game.PlaceId ~= REQUIRED_ID then
+    Player:Kick("Unauthorized Game")
+    return
+end
+
+print("Access Granted")
+
+
 -- loadstrings --
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))()
