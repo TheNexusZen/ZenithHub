@@ -1,4 +1,4 @@
-local ALLOWED_USERS = {"nexushubtesting", "SAB88191", "seventeelovesyouw"}
+local ALLOWED_USERS = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
 local REQUIRED_ID = 109983668079237
 local Player = game:GetService("Players").LocalPlayer
 
@@ -171,7 +171,8 @@ local booster = Features:Toggle({
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        Scripts.ZHBooster()
+        if state then
+                Scripts.ZHBooster()
     end
 })
 
