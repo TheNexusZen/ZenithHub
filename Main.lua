@@ -77,12 +77,14 @@ local Window = WindUI:CreateWindow({
     HideSearchBar = false,
     ScrollBarEnabled = false,
     NewElements = true,
+    
     User = {
-    Enabled = true,
-    Anonymous = true,
-    Callback =
+        Enabled = true,
+        Anonymous = true,
+        Callback = function()
             print("hello")
-},
+        end
+    },
 
 
 })
