@@ -156,15 +156,14 @@ Scripts.ZHautokick()
 -- Scripts.ZHupfloorsteal()
 Scripts.ZHxray() ]]
 
-local booster = Features:Toggle({
+local autograb = Features:Toggle({
     Title = "Booster",
     Desc = "Toggle Booster",
-    Icon = "chevrons-up",
+    Icon = "hand-grab",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        if state then
-                Scripts.ZHBooster()
+        Scripts.ZHBooster()
     end
 })
 
