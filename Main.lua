@@ -11,10 +11,9 @@ local function isAllowed()
     return false
 end
 
-if game.PlaceId ~= REQUIRED_ID then
-    if not isAllowed() then
-        Player:Kick("Unauthorized")
-    end
+if game.PlaceId ~= REQUIRED_ID and not isAllowed() then
+    Player:Kick("Unauthorized")
+end
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
@@ -83,8 +82,6 @@ Scripts.ZHxray()
 
 local developers = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
 
-local Player = game:GetService("Players").LocalPlayer
-
 local function tableHas(tbl, name)
     for _, v in ipairs(tbl) do
         if v == name then return true end
@@ -144,19 +141,8 @@ local Settings = Window:Tab({
 
 -- Features Tab
 
---[[ EXECUTION LIST
-Scripts.ESPbrainrot()
-Scripts.ESPplayer()
-Scripts.FPSd()
--- Scripts.ZHBooster()
--- Scripts.ZHal()
--- Scripts.ZHautograb()
-Scripts.ZHautokick()
--- Scripts.ZHclone()
--- Scripts.ZHupfloorsteal()
-Scripts.ZHxray() ]]
-
-local autograb = Features:Toggle({
+-- Renamed to boosterToggle to prevent variable overwriting
+local boosterToggle = Features:Toggle({
     Title = "Booster",
     Desc = "Toggle Booster",
     Icon = "hand-grab",
@@ -167,7 +153,7 @@ local autograb = Features:Toggle({
     end
 })
 
-local autograb = Features:Toggle({
+local autograbToggle = Features:Toggle({
     Title = "Auto grab",
     Desc = "Toggle Auto grab",
     Icon = "hand-grab",
@@ -178,7 +164,7 @@ local autograb = Features:Toggle({
     end
 })
 
-local Autokick = Features:Toggle({
+local autokickToggle = Features:Toggle({
     Title = "Auto kick",
     Desc = "Toggle Auto kick",
     Icon = "hand-grab",
@@ -189,7 +175,7 @@ local Autokick = Features:Toggle({
     end
 })
 
-local autoclone = Features:Toggle({
+local autocloneToggle = Features:Toggle({
     Title = "Auto clone",
     Desc = "Toggle Auto clone",
     Icon = "hand-grab",
@@ -200,7 +186,7 @@ local autoclone = Features:Toggle({
     end
 })
 
-local xray = Features:Toggle({
+local xrayToggle = Features:Toggle({
     Title = "xray",
     Desc = "Toggle xray",
     Icon = "hand-grab",
