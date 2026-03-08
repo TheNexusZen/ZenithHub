@@ -191,7 +191,7 @@ local Autokick = Features:Toggle({
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
-        Scripts.ZHautokick()
+        _G.AKT = state
     end
 })
 
