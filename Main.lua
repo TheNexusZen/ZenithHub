@@ -216,3 +216,17 @@ local xray = Features:Toggle({
         _G.XRM = state
     end
 })
+
+local XrayT = Features:Slider({
+    Title = "Xray Transparency",
+    Desc = "Slider Description",
+    Step = 0.1,
+    Value = {
+        Min = 0,
+        Max = 1,
+        Default = 0.6,
+    },
+    Callback = function(value)
+        _G.XRT = value
+    end
+})
