@@ -14,8 +14,7 @@ end
 if game.PlaceId ~= REQUIRED_ID and then
     if not isAllowed() then
         Player:Kick("Unauthorized")
-    return
-end
+    end
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
