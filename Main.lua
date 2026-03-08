@@ -30,33 +30,30 @@ WindUI:AddTheme({
     Icon = Color3.fromHex("#a1a1aa"),
 })
 
-WindUI:SetTheme("Blue")
-
 local Window = WindUI:CreateWindow({
     Title = "Zenith HUB",
     Icon = "app-window-mac",
-    Author = "by NEXUSZENITH",
+    Author = "by NEXUSzenith",
     Folder = "ZenithHub",
     Size = UDim2.fromOffset(580, 460),
     MinSize = Vector2.new(560, 350),
     MaxSize = Vector2.new(850, 560),
     Transparent = true,
-    Theme = "Blue",
+    Theme = "Dark",
     Resizable = true,
     SideBarWidth = 200,
     BackgroundImageTransparency = 0.42,
-    HideSearchBar = false,
+    HideSearchBar = true,
     ScrollBarEnabled = false,
-    
     User = {
         Enabled = true,
         Anonymous = true,
         Callback = function()
-            print("hello")
-        end
+            print("clicked")
+        end,
     },
-
 })
+
 
 -- SCRIPT LOADSTRINGS
 getgenv().Scripts = {
