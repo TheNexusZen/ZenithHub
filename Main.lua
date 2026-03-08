@@ -76,7 +76,6 @@ local Window = WindUI:CreateWindow({
     BackgroundImageTransparency = 0.42,
     HideSearchBar = false,
     ScrollBarEnabled = false,
-    NewElements = true,
     
     User = {
         Enabled = true,
