@@ -16,35 +16,6 @@ if game.PlaceId ~= REQUIRED_ID and not isAllowed() then
     return
 end
 
-
--- SCRIPT LOADSTRINGS
-getgenv().Scripts = {
-    ESPbrainrot = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPbrainrot.lua"))() end,
-    ESPplayer = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPplayer.lua"))() end,
-    FPSd = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/FPSd.lua"))() end,
-    ZHBooster = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))() end,
-    ZHal = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHal.lua"))() end,
-    ZHautograb = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))() end,
-    ZHautokick = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautokick.lua"))() end,
-    ZHclone = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHclone.lua"))() end,
-    ZHupfloorsteal = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHupfloorsteal.lua"))() end,
-    ZHxray = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHxray.lua"))() end
-}
-
--- EXECUTION LIST
-Scripts.ESPbrainrot()
-Scripts.ESPplayer()
-Scripts.FPSd()
-Scripts.ZHBooster()
-Scripts.ZHal()
-Scripts.ZHautograb()
-Scripts.ZHautokick()
-Scripts.ZHclone()
-Scripts.ZHupfloorsteal()
-Scripts.ZHxray()
- 
-
-
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 WindUI:AddTheme({
@@ -85,8 +56,33 @@ local Window = WindUI:CreateWindow({
         end
     },
 
-
 })
+
+-- SCRIPT LOADSTRINGS
+getgenv().Scripts = {
+    ESPbrainrot = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPbrainrot.lua"))() end,
+    ESPplayer = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPplayer.lua"))() end,
+    FPSd = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/FPSd.lua"))() end,
+    ZHBooster = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHBooster.lua"))() end,
+    ZHal = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHal.lua"))() end,
+    ZHautograb = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautograb.lua"))() end,
+    ZHautokick = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHautokick.lua"))() end,
+    ZHclone = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHclone.lua"))() end,
+    ZHupfloorsteal = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHupfloorsteal.lua"))() end,
+    ZHxray = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHxray.lua"))() end
+}
+
+-- EXECUTION LIST
+Scripts.ESPbrainrot()
+Scripts.ESPplayer()
+Scripts.FPSd()
+Scripts.ZHBooster()
+Scripts.ZHal()
+Scripts.ZHautograb()
+Scripts.ZHautokick()
+Scripts.ZHclone()
+Scripts.ZHupfloorsteal()
+Scripts.ZHxray()
 
 local developers = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
 
