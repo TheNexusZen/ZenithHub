@@ -11,8 +11,9 @@ local function isAllowed()
     return false
 end
 
-if game.PlaceId ~= REQUIRED_ID and not isAllowed() then
-    Player:Kick("Unauthorized")
+if game.PlaceId ~= REQUIRED_ID and then
+    if not isAllowed() then
+        Player:Kick("Unauthorized")
     return
 end
 
