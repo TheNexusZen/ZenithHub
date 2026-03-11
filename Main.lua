@@ -175,17 +175,6 @@ local autokickToggle = Features:Toggle({
     end
 })
 
-local autocloneToggle = Features:Toggle({
-    Title = "Auto clone",
-    Desc = "Toggle Auto clone",
-    Icon = "hand-grab",
-    Type = "Checkbox",
-    Value = false,
-    Callback = function(state) 
-        Scripts.ZHclone()
-    end
-})
-
 local FPSd = Features:Toggle({
     Title = "FPS devour",
     Desc = "Toggle FPSd",
@@ -194,6 +183,20 @@ local FPSd = Features:Toggle({
     Value = false,
     Callback = function(state) 
         _G.FPSd = state
+    end
+})
+
+local XrayT = Features:Slider({
+    Title = "Cycle Speed",
+    Desc = "Change the FPSd cycle speed",
+    Step = 0.1,
+    Value = {
+        Min = 0.1,
+        Max = 2,
+        Default = 0.1,
+    },
+    Callback = function(value)
+        _G.CS = value
     end
 })
 
