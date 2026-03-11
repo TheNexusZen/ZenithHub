@@ -147,7 +147,7 @@ local Settings = Window:Tab({
 local boosterToggle = Features:Toggle({
     Title = "Booster",
     Desc = "Toggle Booster",
-    Icon = "hand-grab",
+    Icon = "chevrons-up",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
@@ -169,7 +169,7 @@ local autograbToggle = Features:Toggle({
 local autokickToggle = Features:Toggle({
     Title = "Auto kick",
     Desc = "Toggle Auto kick",
-    Icon = "hand-grab",
+    Icon = "log-out",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
@@ -180,7 +180,7 @@ local autokickToggle = Features:Toggle({
 local FPSd = Features:Toggle({
     Title = "FPS devour",
     Desc = "Toggle FPSd",
-    Icon = "hand-grab",
+    Icon = "hammer",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
@@ -205,7 +205,7 @@ local CS = Features:Slider({
 local xrayToggle = Features:Toggle({
     Title = "xray",
     Desc = "Toggle xray",
-    Icon = "hand-grab",
+    Icon = "eye-closed",
     Type = "Checkbox",
     Value = false,
     Callback = function(state) 
@@ -224,5 +224,52 @@ local XrayT = Features:Slider({
     },
     Callback = function(value)
         _G.XRT = value
+    end
+})
+
+
+-- ESP TAB
+
+local EB = ESP:Toggle({
+    Title = "Brainrot ESP",
+    Desc = "Toggle Brainrot ESP",
+    Icon = "eye",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        _G.EB = state
+    end
+})
+
+local EP = ESP:Toggle({
+    Title = "Player ESP",
+    Desc = "Toggle Player ESP",
+    Icon = "eye",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        _G.EP = state
+    end
+})
+
+local RC = ESP:Toggle({
+    Title = "ESP random color",
+    Desc = "Toggle random player esp colors",
+    Icon = "rainbow",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        _G.RANDCOLOR = state
+    end
+})
+
+local ET = ESP:Toggle({
+    Title = "Timer ESP",
+    Desc = "Toggle Timer ESP",
+    Icon = "timer",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        _G.ET = state
     end
 })
