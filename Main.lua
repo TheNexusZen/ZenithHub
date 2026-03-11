@@ -186,6 +186,17 @@ local autocloneToggle = Features:Toggle({
     end
 })
 
+local FPSd = Features:Toggle({
+    Title = "FPS devour",
+    Desc = "Toggle FPSd",
+    Icon = "hand-grab",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) 
+        _G.FPSd = state
+    end
+})
+
 local xrayToggle = Features:Toggle({
     Title = "xray",
     Desc = "Toggle xray",
