@@ -66,6 +66,7 @@ getgenv().Scripts = {
     ZHclone = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHclone.lua"))() end,
     ZHupfloorsteal = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHupfloorsteal.lua"))() end,
     ZHxray = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHxray.lua"))() end
+    ESPtimer = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPtimer.lua"))() end
 }
 
 -- EXECUTION LIST
@@ -79,6 +80,7 @@ Scripts.ZHautokick()
 Scripts.ZHclone()
 Scripts.ZHupfloorsteal()
 Scripts.ZHxray()
+Scripts.ESPtimer()
 
 local developers = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
 
