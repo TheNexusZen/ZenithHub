@@ -186,7 +186,7 @@ local FPSd = Features:Toggle({
     end
 })
 
-local XrayT = Features:Slider({
+local CS = Features:Slider({
     Title = "Cycle Speed",
     Desc = "Change the FPSd cycle speed",
     Step = 0.1,
