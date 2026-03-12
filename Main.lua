@@ -69,17 +69,16 @@ local Scripts = {
 }
 
 -- EXECUTION LIST
-Scripts.ESPbrainrot()
-Scripts.ESPplayer()
-Scripts.FPSd()
-Scripts.ZHBooster()
-Scripts.ZHal()
-Scripts.ZHautograb()
-Scripts.ZHautokick()
-Scripts.ZHclone()
-Scripts.ZHupfloorsteal()
-Scripts.ZHxray()
-Scripts.ESPtimer()
+-- EXECUTION LIST
+for name, func in pairs(Scripts) do
+    local success, err = pcall(func)
+    if not success then
+        warn("ZenithHub: Failed to load " .. name .. ". Error: " .. err)
+    else
+        print("ZenithHub: " .. name .. " loaded successfully.")
+    end
+end
+
 
 local developers = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
 
