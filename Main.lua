@@ -53,8 +53,6 @@ local Window = WindUI:CreateWindow({
     },
 })
 
-local get = gethui()
-windui:setparent(get)
 -- SCRIPT LOADSTRINGS
 Scripts = {
     ESPbrainrot = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPbrainrot.lua"))() end,
