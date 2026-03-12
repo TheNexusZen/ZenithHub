@@ -68,6 +68,16 @@ local Scripts = {
     ZHxray = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ZHxray.lua"))() end
 }
 
+-- EXECUTION LIST (Optimized with task.spawn)
+for name, func in pairs(Scripts) do
+    task.spawn(function()
+        local success, err = pcall(func)
+        if not success then
+            warn("ZenithHub: Failed to load " .. name .. ". Error: " .. err)
+        end
+    end)
+end
+
 local developers = {"nexushubtesting", "SAB88191", "seventeenlovesyouw"}
 
 local function tableHas(tbl, name)
@@ -259,12 +269,3 @@ local ET = ESP:Toggle({
         _G.ET = state
     end
 })
-
-for name, func in pairs(Scripts) do
-    local success, err = pcall(func)
-    if not success then
-        warn("ZenithHub: Failed to load " .. name .. ". Error: " .. err)
-    else
-        print("ZenithHub: " .. name .. " loaded successfully.")
-    end
-end
