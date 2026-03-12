@@ -53,6 +53,17 @@ local Window = WindUI:CreateWindow({
     },
 })
 
+-- Force the UI into the CoreGui immediately
+local success, err = pcall(function()
+    Window:SetParent(gethui())
+end)
+
+if not success then
+    -- Fallback for executors that don't support gethui()
+    Window:SetParent(game:GetService("CoreGui"))
+end
+
+
 -- SCRIPT LOADSTRINGS
 local Scripts = {
     ESPbrainrot = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheNexusZen/ZenithHub/refs/heads/main/ESPbrainrot.lua"))() end,
